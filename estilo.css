@@ -1,0 +1,26 @@
+body{
+    background-color:wheat;
+}
+body h1{
+    text-align:center;
+    font-size: 25px;
+ color: darkblue;
+
+}
+.cerrar input{
+ margin-left: 900px;
+ background-color: mediumblue;
+  color:white;
+}
+
+.card-body{
+    background-color: moccasin;
+    width: 27%;
+    text-align: center;
+    margin-left: 36%;
+    margin-top: 26%;
+    font-size: 19px;
+    font-family: Circular;
+    color: darkred;
+  }
+
