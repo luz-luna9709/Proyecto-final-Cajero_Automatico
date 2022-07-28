@@ -11,6 +11,9 @@ billetes=["50"];
 billetes=["20"];
 billeteses=["10"];
 
+var div = 0;
+var papeles = 0;
+var resultado = document.getElementById("resultado");
 class Billete
 {
 	constructor(v, c)
@@ -28,13 +31,77 @@ caja.push( new Billete(10, 5) );
 
 contar();
 
-var div = 0;
-var papeles = 0;
+var b = document.getElementById("retirar");
+b.addEventListener("click", entregarDinero);
+function entregarDinero()
+{
+    var t = document.getElementById("dinero");
+    dinero = parseInt(t.value);
+    if (total >= dinero)
+    {
+        for(bi of caja)
+        {
+            if (dinero > 0)
+            {
+                div = Math.floor(dinero/bi.valor);
+                if (div>bi.cantidad)
+                {
+                    papeles = bi.cantidad;
+                }
+                else
+                {
+                    papeles = div;
+                }
+                    bi.cantidad = bi.cantidad-papeles;
+                for (var i = 0; i < papeles; i++)
+                {
+                }
+                dinero -= (bi.valor * papeles);
+            }
+        }
+        if (dinero == 0)
+        {
+            resultado.innerHTML += "Se ha retirado:" + cantidad + "<br />";
+   
+             resultado.innerHTML += "<hr />";
+        contar();  
+        }
+        else
+        {
+            resultado.innerHTML += "No tengo los billetes para esa suma, intenta otro valor <hr />";
+        }
+    }
+    else
+    {
+        resultado.innerHTML += "No tengo disponible esa cantidad :( <hr />";
+    }  
+}
 
-var boton_depositar = document.getElementById("deposito");
-boton_depositar.addEventListener("click", deposito);
 
-function deposito()
+
+ 
+var boton_saldo = document.getElementById("ver_saldo");
+boton_saldo.addEventListener("click", saldo);
+
+function saldo()
+{
+    var monto = 0;
+    for(var v of caja)
+    {
+        monto = monto + v.valor * v.cantidad;
+        total = monto;
+        resultado.innerHTML = "Su saldo actual es: " + monto + "<hr />";
+    }
+}
+
+
+
+
+
+var boton_depositar = document.getElementById("depositar");
+boton_depositar.addEventListener("click", depositar);
+
+function depositar()
 {
 	var monto = prompt("Indica el valor a depositar: Billetes 100, 50, 20 y 10", "100");
 	if(monto == 100 || monto == 50 ||  monto == 20 || monto == 10 )

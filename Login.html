@@ -1,40 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilo.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <title>Cajero Automatico</title>
+ 
 </head>
 
+<header>
+    <h1>Bienvenido a Cajeros ATM</h1>
+</header>
+
+
 <body>
-  <div class="card-body">
-    <form action="" method="post">
-        <h1>Bienvenido a Cajero ATM</h1>
-        <div class="input-group form-group">
-          <div class="input-group-prepend">
-           <span class="input-group-text"><i class="fas fa-user"></i></span>
-          </div>
-        <label for="">Usuario</label>
-        <input type="text" name="usuario" id="">
+   <div class="main">
+  
+    <div class="container">
+        
+<center>
+<div class="middle">
+  
+      <div id="login">
+        <form action="javascript:void(0);" method="get" id="iniciar">
+
+          <fieldset class="clearfix">
+            <p ><span class="fa fa-user"></span><input type="text" name="usuario" placeholder="Usuario" id="limpiar"></p> 
+            <p><span class="fa fa-lock"></span> <input type="password" name="password" placeholder="Password"id=""></p> 
+             
+    <div>
+        <span style="width:50%; text-align:center;  display:inline-flex;"><input type="submit" name="Ingresar" class="btn btn-info btn-md" value="Ingresar" onclick= iniciosesion(form)></span>
+           
+     </div>
+
+          </fieldset>
+<div class="clearfix"></div>
+        </form>
+
+        <div class="clearfix"></div>
+
+      </div> <!-- end login -->
+      <div class="logo">
+        <img src="img/cajero_atm.jpg" alt="">
+          
+          <div class="clearfix"></div>
       </div>
-      <br>
-      <div class="input-group form-group">
-        <div class="input-group-prepend">
-            <span class="input-group-text"><i class="fas fa-key"></i></span>
-        </div>
-        <label for="">Password</label>
-        <input type="password" name="password" id="">
+      
       </div>
-      <br>
-      <div class="form-group">
-        <input type="button" value="Ingresar" onclick="iniciosesion(this.form)">
-      </div>
+</center>
     </div>
-    </form>
-         <script src="login.js"></script>
+
+</div>
+
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="login.js"></script>
+    <script>
+        document.getElementById("limpiar").value = "";
+    </script>
 </body>
+<footer>
+         <p>Derechos Reservados @ Cajeros ATM "Luna" 2022</p> 
+</footer>
 
 </html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cajero Automatico</title>
+</head>
+<body>
+    <nav>
+        <div class="cerrar">
+            <input class="btn btn-outline-info" type="button" value="Cerrar Sesion" onclick="location.href='Login.html'">
+         </div>
+    </nav>
+    <h1>Bienvenid@ a Cajeros ATM</h1>
+   <center>
+    <img src="img/cajero.png" alt="">
+    </center>
+    <center>
+    <div class="transacciones">    
+    <p>
+        <input class="cantidad" type="text" id="limpiar" />
+        <input type="button" value="Retirar" id="retirar">
+        <input type="button" value="Depositar" id="depositar" />
+          <input type="button" value="Consultar Saldo" id="ver_saldo">
+        </p>
+    </div> 
+
+        <p id="resultado"></p>
+    </center>
+    
+        <script src="cajero.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#limpiar').click(function() {
+                    $('.cantidad').val('');
+                });
+            });
+        </script>
+</body>
+</html>
