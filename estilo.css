@@ -139,6 +139,10 @@ div.main{
      margin-top: 26px;
      font-size: 15px;
  }
+ .main h1{
+  color: aqua;
+  padding-top: 52px;
+ }
  @media screen and (max-width: 600px) {
      .logo img{
        display:none;
@@ -155,5 +159,6 @@ div.main{
     margin-left: auto;
      
     }
+    
     
    }
